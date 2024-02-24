@@ -1,0 +1,491 @@
+/* I use a CSS reset at begin */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Some general rules */
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 4px;
+  }
+
+@font-face {
+    font-family: "Noto";
+    src: url("Noto") format("woff2");
+    font-style: normal;
+    font-weight: 300;
+  }
+
+body, textarea{
+    font-family: "Noto", "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 1.571;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+    color: inherit;
+    transition: 0.25s;
+    transition-delay: 0.1s;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+
+/*about navbar*/
+.navbar{
+    position:sticky;
+    width:100%;
+    top: 0;
+    background-color: #151E44;
+    color:#fff;
+    min-height: 4.75rem;
+    z-index: 10;
+}
+
+.nav{
+    position: relative;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:85%;
+    margin : 0 auto;
+    transform: translateY(5px);
+}
+
+
+.projet-name{
+    width:35%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav li, h1{
+    display:inline-block;
+    justify-content: space-around;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.main-links li a{
+    padding-left : 7px;
+    padding-right: 7px;
+}
+
+.main-links li a:hover{
+    text-decoration: none;
+    padding-bottom: 12px;
+    font-weight: 700;
+    color: #f5f5f5;
+    border-bottom: #FFCD3F solid 3px;
+
+}
+
+h1::before{
+    content: "|";
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logo{
+    height: 25px;
+    transform: translateY(20px);
+}
+
+.socials li a{
+    text-align: center;
+    align-items: center;
+    padding : 10px;
+}
+
+.socials li {
+margin-left: -10px;
+}
+
+
+.socials li a:hover{
+    background-color: #ffffff42;
+    border-radius: 50%;
+}
+
+/*about class body*/
+.body{
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin : 0 auto;
+}
+
+.generals, .quality{
+    background-color: #F5F5F5;
+    color : #484848;
+    padding: 30px 50px;
+    border-radius: 8px;
+}
+
+.generals, .quality-and-hr{
+    width: 100%;
+    margin : 50px 30px;
+}
+
+.generals li, .quality li{
+    list-style:disc;
+    padding: 4px;
+}
+
+.picto{
+    width: 25px;
+    margin-bottom: 10px;
+
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    width : 100%;
+}
+
+.combo, 
+.online ul,
+.store ul,
+.money ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom : 20px;
+    transform: translateX(10%);
+}
+
+.as-is, 
+.repack,
+.online li,
+.store li,
+.money li, 
+.q-classics, 
+.q-docs{
+    width:50%;
+}
+
+/*about sqr & qsr*/
+.template{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sqr, .qsr{
+    width: 50%;
+    overflow-wrap: break-word;
+}
+
+textarea{
+    resize: none;
+    width:95%;
+    border-radius: 8px;
+    padding: 10px;
+    align-items: center;    
+}
+
+button{
+    background-color: #FFCD3F;
+    width: 90px;
+    height: 35px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 20px 5px;  
+    border: none;
+}
+
+button:hover{
+background-color: #ffcc3fb7;
+cursor : pointer;
+}
+
+/*about hr*/
+
+.hr {
+    margin-top: 40px;
+}
+
+.hr ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hr li{
+    background-color: #2d2d2d;
+    color:#fff;
+    height: 35px;
+    padding : 7px 15px;
+    margin: 5px 15px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-align: center; 
+}
+
+.hr a{
+    text-decoration: none;
+}
+
+.hr li:hover{
+    background-color: #484848;
+}
+
+footer{
+    padding-top: 50px;
+    padding-bottom: 15px;
+    width : 100%;
+    margin : 0 auto; 
+    display : flex;
+    justify-content: center;
+    align-items: center; 
+    color:#afafaf;
+}
+
+footer:hover{
+    color : #484848;
+    transition: 0.25s;
+    transition-delay: 0.1s; }
+
+.linkedin{
+    text-decoration: underline;
+}
+
+.notification{
+    background-color: #2d2d2d;
+    color:#fff;
+    border-radius: 20px;
+    width : 500px;
+    height: 100px;
+    position: absolute;
+    right : 30px;
+    top : 95px;
+    transition: 0.25s;
+    transition-delay: 0.1s; 
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.question > span{
+    font-size : 1rem;
+}
+
+.emoji{
+    font-size: 50px;
+    text-align: center;
+}
+
+.yes, .no{
+    width: 80px;
+    background-color: #484848;  
+    color: #fff;
+    margin: 10px;
+}
+
+.yes:hover{
+    background-color: #00853e;
+    transition: 0.25s;
+    transition-delay: 0.1s;
+}
+
+.no:hover{
+    background-color: #d62c2c;
+    transition: 0.25s;
+    transition-delay: 0.1s;
+}
+
+.custom{
+    padding : 25px;
+    transition: none;
+}
+
+@media only screen and (max-width: 1670px) {
+
+    .projet-name{
+        width:20%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav li, h1{
+        display:inline-block;
+        justify-content: space-around;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 20px 10px;
+    }
+
+    h1{
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1284px){
+    .nav{
+        width:100%;
+    }
+}
+@media only screen and (max-width: 1150px){
+
+    .generals, .quality-and-hr{
+       min-width : 250px;
+       margin : 50px 10px;
+    }
+
+    .as-is, 
+    .repack,
+    .online li,
+    .store li,
+    .money li, 
+    .q-classics, 
+    .q-docs{
+        width:100%;
+    }
+
+    .template{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .sqr, .qsr{
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 944px){
+    .nav{
+        width:100%;
+    }
+    .projet-name{
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 711px){
+    .socials{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .body{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 0 auto;
+    }
+
+    
+.generals, .quality{
+    min-width: none;
+    width: 100%;
+    background-color: #F5F5F5;
+    color : #484848;
+    padding: 30px;
+
+}
+
+.generals, .quality-and-hr{
+    width: 100%;
+    margin : 30px auto;
+}
+
+.generals li, .quality li{
+    list-style:disc;
+    padding: 10px;
+}
+
+.picto{
+    width: 30px;
+    margin-bottom: 10px;
+
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    width : 100%;
+}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
